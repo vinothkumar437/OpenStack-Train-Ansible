@@ -12,4 +12,4 @@ This Ansible playbooks was made to automate the tasks of creating a virtualizati
 You can also use this playbooks (with small modifications made by yourself) in order to create a redundant infrastructure.
 <br>
 <br>
-In summary, this installer can produce an OpenStack virtualization service completely usable in production environments, however, remember that the "bugs" factor don't depend solely on us. From time to time OpenStack packages can bring us some bugs too. We are using rpm packages from Redhat repositories and they can have their own bugs.
+In summary, this installer can produce an OpenStack virtualization service completely usable for POC environments, however, remember that the "bugs" factor don't depend solely on us. From time to time OpenStack packages can bring us some bugs too. We are using rpm packages from Redhat repositories and they can have their own bugs.
