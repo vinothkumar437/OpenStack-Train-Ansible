@@ -1,1 +1,2 @@
-# OpenStack-Train-Ansible
+# Automated OpenStack Installation (TRAIN) through Ansible Playbooks
+
