@@ -1,0 +1,53 @@
+- name: Upgrade the packages on all nodes
+  yum:
+    name: '*'
+    state: latest
+
+- name: Disable SELinux
+  selinux:
+    state: disabled
+
+- name: Stop, Disable the firewalld and NetworkManager service
+  service:
+    name: "{{ item }}"
+    state: stopped
+    enabled: no
+  with_items:
+  - firewalld
+  - NetworkManager
+
+- name: reboot
+  reboot:
+    reboot_timeout: 100
+
+- name: wait for nodes to come up
+  wait_for_connection:
+    delay: 30
+    timeout: 30
+
+- name: Enable the Openstack Repository
+  yum:
+    name: centos-release-openstack-train
+    state: present
+
+- name: Upgrade the packages on all nodes
+  yum:
+    name: '*'
+    state: latest
+
+- name: Install the OpenStack client and openstack-selinux package to automatically manage security policies for OpenStack services
+  yum:
+    name: "{{ item }}"
+    state: present
+  with_items:
+  - python-openstackclient
+  - openstack-selinux
+
+- name: reboot
+  reboot:
+    reboot_timeout: 100
+
+- name: wait for nodes to come up
+  wait_for_connection:
+    delay: 30
+    timeout: 30
