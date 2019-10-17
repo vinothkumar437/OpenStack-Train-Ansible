@@ -1,0 +1,19 @@
+##### OpenStack ######
+[all:children]
+controller
+compute
+
+[all:vars]
+ansible_ssh_common_args='-o StrictHostKeyChecking=no'
+ansible_become=yes
+ansible_become_user=root
+ansible_become_method=sudo
+ansible_become_password=root1234
+ansible_user=root
+ansible_password=root1234
+
+[controller]
+controller.example.com
+
+[compute]
+compute.example.com
