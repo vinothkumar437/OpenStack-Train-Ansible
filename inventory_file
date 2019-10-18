@@ -12,6 +12,9 @@ ansible_become_password=root1234
 ansible_user=root
 ansible_password=root1234
 
+device_name=ens33
+controller_ip=192.168.1.121
+
 [controller]
 controller.example.com
 
