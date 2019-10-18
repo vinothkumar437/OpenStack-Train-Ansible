@@ -1,0 +1,9 @@
+- name: OpenStack Installation
+  hosts: all
+  roles:
+  - common
+  
+- name: OpenStack Controller Installation
+  hosts: controller
+  roles:
+  - controller
