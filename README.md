@@ -1,4 +1,4 @@
-# Automated OpenStack Installation ( STEIN ) through Ansible Playbooks
+# Automated OpenStack Installation ( TRAIN ) through Ansible Playbooks
 
 Vinothkumar P<br>
 Email ID: vinothkumarpcse@gmail.com<br>
